@@ -19,7 +19,7 @@ body {
   margin: 0 8vw;
 }
 
-.header .row {
+.header .container {
   width: 100%;
   background-color: #feedca;
   border-radius: 0 0 2vmin 2vmin;
@@ -31,29 +31,31 @@ body {
   gap: 5%;
 }
 
-.header .row img {
+.header .container img {
   width: auto;
   height: 6vmin;
 }
 
 .header .ticket {
   border-radius: 2vmin;
-  width: 31vmin;
-  height: 5vmin;
+  width: 33vmin;
+  height: 5.4vmin;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #e17124;
-  padding: 0.7vh 1.7vmax;
+  padding: 0.7vh 1.4vmax;
 }
 
-.header .ticket h1 {
+.header .relative .container .ticket h1 {
   font-family: "Georama", sans-serif;
   color: #feedca;
   font-size: 1.3vmax;
+  margin: 0;
+  font-weight: 600;
 }
 
-.header .nav {
+.header .wrap {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -61,12 +63,18 @@ body {
   gap: 10%;
 }
 
-.header .nav .text h1 {
+.header .wrap .text h1 {
   font-family: "Georama", sans-serif;
   color: #214f4b;
   font-size: 1.3vmax;
+  margin: 0;
+  font-weight: 700;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  height: 100vh;
+}
 .content {
   height: 100vh;
   width: 100%;
@@ -115,18 +123,22 @@ body {
   color: #f6fff7;
   z-index: 2;
   margin: 0;
+  font-weight: 700;
   padding-bottom: 2vw;
 }
 
-.tiket .row {
+a {
+  text-decoration: none;
+}
+.tiket .container {
   display: flex;
   flex-direction: row;
   z-index: 2;
-  justify-content: space-between;
   width: 100%;
+  gap: 2vw;
 }
 
-.tiket .card {
+.tiket .item {
   display: flex;
   width: 40vw;
   height: 20vw;
@@ -135,7 +147,7 @@ body {
   overflow: hidden;
 }
 
-.tiket .card .cover {
+.tiket .item .cover {
   display: flex;
   width: 30vw;
   height: 100%;
@@ -144,13 +156,13 @@ body {
   overflow: hidden;
 }
 
-.tiket .card .cover img {
+.tiket .item .cover img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.tiket .card .desc {
+.tiket .item .desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +176,7 @@ body {
   position: relative;
 }
 
-.tiket .card .desc .bg {
+.tiket .item .desc .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -176,12 +188,12 @@ body {
   z-index: 1;
 }
 
-.tiket .card .desc .bg img {
+.tiket .item .desc .bg img {
   width: 100%;
   height: auto;
 }
 
-.tiket .card .desc h2 {
+.tiket .item .desc h2 {
   font-family: "Georama", sans-serif;
   font-size: 1.3vw;
   font-weight: 800;
@@ -189,7 +201,7 @@ body {
   z-index: 4;
 }
 
-.tiket .card .desc h3 {
+.tiket .item .desc h3 {
   font-family: "Georama", sans-serif;
   font-size: 2.5vw;
   font-weight: 800;
@@ -197,7 +209,7 @@ body {
   margin: 0;
 }
 
-.tiket .card .desc ul {
+.tiket .item .desc ul {
   font-family: "Georama", sans-serif;
   font-weight: 550;
   font-size: 1vw;
@@ -206,7 +218,7 @@ body {
   padding-inline-start: 10px;
 }
 
-.tiket .card .desc ul li {
+.tiket .item .desc ul li {
   list-style-type: disc;
 }
 
